@@ -67,7 +67,7 @@ font-weight: bold;
 }
    
 &: p {
-
+letter-speed:5px;
 }
 &: button {
     border:1px solid;
