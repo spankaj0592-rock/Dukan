@@ -1,43 +1,24 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Announcement from '../components/Announcement'
-import ImageSlider from '../components/ImageSlider'
-import  styled from 'styled-components'
+import React from "react";
+import Announcement from "../components/Announcement";
+import Categories from "../components/Categories";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Newsletter from "../components/Newsletter";
+import Products from "../components/Products";
+import Slider from "../components/Slider";
 
-function Home() {
+const Home = () => {
   return (
-  
-     <Container>
+    <div>
+      <Announcement />
+      <Navbar />
+      <Slider />
+      <Categories />
+      <Products/>
+      <Newsletter/>
+      <Footer/>
+    </div>
+  );
+};
 
-      <Announcement/>
-<Navbar/>
-<ImageSlider/>
-</Container>
-  
-
- 
-
-  )
-}
-
-export default Home
-const Container =styled.main`
-
-overflow-x:hidden;
-  min-height: calc(100vh - 70px);
-  padding: 2px;
-    position: relative;
-  &:before{
-    background:url("/home-background.png") center center/cover
-    no-repeat  fixed;
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-
-  }
-  
-  `
+export default Home;
