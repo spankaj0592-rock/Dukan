@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Database from "../Hooks/database";
 import Product from "./Product";
 
 const Container = styled.div`
@@ -8,11 +8,13 @@ const Container = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
 `;
-
+const[Data] =Database();
 const Products = () => {
+
+
   return (
     <Container>
-      {popularProducts.map((item) => (
+      {Data.map((item) => (
         <Product item={item} key={item.id} />
       ))}
     </Container>

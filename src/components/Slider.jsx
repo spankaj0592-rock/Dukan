@@ -1,7 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { useState } from "react";
 import styled from "styled-components";
-
+import Database from "../Hooks/database";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
@@ -79,7 +79,10 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+
+
 const Slider = () => {
+  const[Data] =Database();
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === "left") {
@@ -95,7 +98,7 @@ const Slider = () => {
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
-        {sliderItems.map((item) => (
+        {Data.map((item) => (
           <Slide bg={item.bg} key={item.id}>
             <ImgContainer>
               <Image src={item.img} />

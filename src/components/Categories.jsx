@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Database from "../Hooks/database";
 
 import { mobile } from "../responsive";
 import CategoryItem from "./CategoryItem";
@@ -10,11 +11,13 @@ const Container = styled.div`
   ${mobile({ padding: "0px", flexDirection:"column" })}
 
 `;
-
+const[Data] =Database();
 const Categories = () => {
+ 
+
   return (
     <Container>
-      {categories.map((item) => (
+      {Data.map((item) => (
         <CategoryItem item={item} key={item.id} />
       ))}
     </Container>
