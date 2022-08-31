@@ -1,34 +1,30 @@
-import axios from "axios";
+
 import { useEffect, useState } from "react";
 
-// Contact hooks function
 
-// To get the contact details using hooks and share with other components
 
 const Database = () => {
   const [Data, setData] = useState([]);
+  const[DataCatogories, setDataCat] = useState([]);
+console.log("sds"+DataCatogories);
 
-  console.log(Data);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get(
-          `https://my-json-server.typicode.com/spankaj0592-rock/Dukan/db`
-        );
-
-        const myData = response.data;
-        setData(myData);
-        console.log(myData);
+useEffect(() => {
+fetch('http://localhost:3000/db')
+  .then(res => {
+    return res.json()
+    .then(data =>{
+      setData(data.sliderItems)
+      setDataCat(data.categories);
+     
       
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getData();
-  }, []);
+    })
+  });
+  
+}, []);
+return [Data];
 
-  return [Data];
-};
+}
+  
 
-export default Database;
+export default Database

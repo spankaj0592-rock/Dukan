@@ -2,23 +2,25 @@ import styled from "styled-components";
 import Database from "../Hooks/database";
 import Product from "./Product";
 
-const Container = styled.div`
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-`;
-const[Data] =Database();
-const Products = () => {
 
+
+const Products = () => {
+  const[DataProduct] =Database();
 
   return (
     <Container>
-      {Data.map((item) => (
-        <Product item={item} key={item.id} />
+      {DataProduct.map((item) => (
+        <Product item={item.img} key={item.id} />
       ))}
     </Container>
   );
 };
 
 export default Products;
+
+const Container = styled.div`
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+`;
