@@ -1,6 +1,4 @@
 {
- "data":[
- {
   "sliderItems": [
     {
       "id": "1",
@@ -23,14 +21,12 @@
       "desc": "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       "bg": "fbf0f4"
     }
-  ]
-},
+  ],
 
-{
   "categories": [
     {
       "id": 1,
-      "img": "https://image.shutterstock.com/image-photo/basic-white-tshirt-on-grey-600w-1901280694.jpg",
+      "img": "",
       "title": "SHIRT STYLE!"
     },
     {
@@ -43,10 +39,8 @@
       "img": "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       "title": "LIGHT JACKETS"
     }
-  ]
-},
+  ],
 
-{
   "popularProducts ": [
     {
       "id": 1,
@@ -81,6 +75,4 @@
       "img": "https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png"
     }
   ]
-}
-]
 }
